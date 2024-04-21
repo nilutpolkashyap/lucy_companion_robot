@@ -8,8 +8,8 @@ from viam.components.board import Board
 
 async def connect():
     opts = RobotClient.Options.with_api_key( 
-        api_key='syzxne67tsxdy1198k0tkjp3pci74jnx',
-        api_key_id='cf8af789-016b-4b46-bbf4-52fb60ac50ab'
+        api_key='<API_KEY>',
+        api_key_id='<API_KEY_ID>'
     )
     return await RobotClient.at_address('lucy-robot-main.l48ztb9x2e.viam.cloud', opts)
 
