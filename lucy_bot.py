@@ -29,18 +29,18 @@ async def main():
         detections = await object_detection.get_detections_from_camera('webcam')
 
         if len(detections) > 0:
-            print(detections[0].class_name)
             detectedObject = detections[0].class_name
 
         commands = await speech.get_commands(1)
 
         if len(commands) > 0:
             command = commands[0]
+            print(detections[0].class_name)
 
             if detectedObject != "":
                 article = "an" if detectedObject[0].lower() in 'aeiou' else "a"
 
-                initialCommand = "I have detected"
+                initialCommand = "I can see"
                 initialResult = f"{initialCommand} {article} {detectedObject}."
                 print(initialResult)
 
